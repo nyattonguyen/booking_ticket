@@ -44,6 +44,7 @@ class _HomeSreenState extends State<HomeSreen> {
                         height: 60,
                         width: 60,
                         decoration: BoxDecoration(
+                            color: Colors.white,
                             borderRadius: BorderRadius.circular(10),
                             image: const DecorationImage(
                                 fit: BoxFit.fitHeight,
@@ -93,7 +94,11 @@ class _HomeSreenState extends State<HomeSreen> {
               ),
             ),
             const Gap(15),
-            TicketView()
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              padding: const EdgeInsets.only(left: 20),
+              child: Row(children: [TicketView(), TicketView()]),
+            )
           ],
         ));
   }
