@@ -1,4 +1,6 @@
+import 'package:bookingticket/screens/hotel_screen.dart';
 import 'package:bookingticket/screens/ticket_view.dart';
+import 'package:bookingticket/utils/app_info_list.dart';
 import 'package:bookingticket/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -97,8 +99,43 @@ class _HomeSreenState extends State<HomeSreen> {
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               padding: const EdgeInsets.only(left: 20),
-              child: Row(children: [TicketView(), TicketView()]),
-            )
+              child: Row(
+                  children: ticketList
+                      .map((ticketSingle) => TicketView(ticket: ticketSingle))
+                      .toList()),
+            ),
+            const Gap(15),
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Hotels",
+                    style: Styles.headLineStyle2,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      print("Are you OK?");
+                    },
+                    child: Text(
+                      "View all",
+                      style:
+                          Styles.textStyle.copyWith(color: Styles.primaryColor),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            const Gap(15),
+            SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                padding: const EdgeInsets.only(left: 20),
+                child: Row(
+                  children: hotelList
+                      .map((singleHotel) => HotelScreen(hotel: singleHotel))
+                      .toList(),
+                ))
           ],
         ));
   }
