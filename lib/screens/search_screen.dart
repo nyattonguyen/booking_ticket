@@ -86,7 +86,7 @@ class SearchScreen extends StatelessWidget {
                   Text(
                       "20% discount on the early booking of this flight. Don't miss.",
                       style: Styles.headLineStyle3
-                          .copyWith(fontWeight: FontWeight.w200)),
+                          .copyWith(fontWeight: FontWeight.w400)),
                 ]),
               ),
               Gap(AppLayout.getWidth(15)),
@@ -95,8 +95,8 @@ class SearchScreen extends StatelessWidget {
                   Stack(
                     children: [
                       Container(
-                        width: size.width * 0.44,
-                        height: AppLayout.getHeight(200),
+                        width: size.width * 0.42,
+                        height: AppLayout.getHeight(210),
                         decoration: BoxDecoration(
                           color: const Color(0xFF3AB8B8),
                           borderRadius:
@@ -140,7 +140,7 @@ class SearchScreen extends StatelessWidget {
                   ),
                   Gap(AppLayout.getHeight(15)),
                   Container(
-                    width: size.width * 0.44,
+                    width: size.width * 0.43,
                     height: AppLayout.getHeight(210),
                     padding: EdgeInsets.symmetric(
                         vertical: AppLayout.getHeight(15),
