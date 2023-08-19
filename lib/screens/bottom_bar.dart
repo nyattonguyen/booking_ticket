@@ -1,4 +1,5 @@
 import 'package:bookingticket/screens/home_screen.dart';
+import 'package:bookingticket/screens/profile_screen.dart';
 import 'package:bookingticket/screens/search_screen.dart';
 import 'package:bookingticket/screens/ticket_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -18,7 +19,7 @@ class _BottomBar extends State<BottomBar> {
     const HomeSreen(),
     const SearchScreen(),
     const TicketScreen(),
-    const Text("Profile")
+    const ProfileScreen()
   ];
 
   void _onItemTapped(int index) {

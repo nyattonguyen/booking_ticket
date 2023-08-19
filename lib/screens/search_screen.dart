@@ -26,7 +26,11 @@ class SearchScreen extends StatelessWidget {
                 .copyWith(fontSize: AppLayout.getWidth(35)),
           ),
           Gap(AppLayout.getHeight(20)),
-          AppTicketTans(firstTab: "Airline Tickets", secondTab: "Hotels"),
+          AppTicketTans(
+            firstTab: "Airline Tickets",
+            secondTab: "Hotels",
+            onTabChanged: (isSelected) {},
+          ),
           Gap(AppLayout.getHeight(25)),
           const AppIconText(
               icon: Icons.flight_takeoff_rounded, text: "Departure"),
